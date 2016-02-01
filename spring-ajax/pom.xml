@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allen.spring</groupId>
+  <artifactId>spring-ajax</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>spring-ajax Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>4.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+    	<groupId>log4j</groupId>
+    	<artifactId>log4j</artifactId>
+    	<version>1.2.14</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.code.gson</groupId>
+    	<artifactId>gson</artifactId>
+    	<version>2.5</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-lang3</artifactId>
+    	<version>3.4</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-databind</artifactId>
+    	<version>2.5.5</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>spring-ajax</finalName>
+    <pluginManagement>
+    	<plugins>
+    		<plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.2.10.v20150310</version>
+        <configuration>
+          <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+          <scanIntervalSeconds>3</scanIntervalSeconds>
+          <!--  By Default, jetty start on port 8080
+          <httpConnector>
+              <port>9090</port>
+          </httpConnector>
+          -->
+        </configuration>
+      </plugin>
+    	</plugins>
+    </pluginManagement>
+  </build>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-framework-bom</artifactId>
+  			<version>4.2.4.RELEASE</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+</project>
